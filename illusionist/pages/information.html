@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>illusionist.</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../style/information-style.css">
+        <link rel="stylesheet" href="../style/style.css">
+
+    </head>
+    <body onload="getCookie()">
+        <nav>
+            <div class="logo">
+                <a href="../index.html"><h1>illusionist<span class="h1color">.</span></h1></a>
+            </div>
+                <ul class="nav-links">
+                    <li>
+                        <a onclick="deleteCookie()" href="cards.html">Cards</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav>
+
+        <h1 id="card-name"></h1>
+        <section class="information">
+          <img id="card-picture"></img>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus quisquam doloremque excepturi? Unde architecto, minus repellat molestiae est fugiat repellendus nulla ullam vel similique dolorem quas atque, ab voluptate eveniet iusto reiciendis mollitia ipsam eius? Minima, corrupti libero architecto quod unde ea quasi pariatur, a dicta eius rem ipsam, voluptatum deleniti eaque illo velit veritatis. Mollitia nisi quibusdam accusantium officia alias numquam aliquam in modi doloribus debitis quisquam dicta est magnam eos possimus maxime nam harum eum maiores, distinctio pariatur nemo? Eos inventore corporis asperiores tempore libero. Tenetur doloremque illo officiis nisi voluptatum accusamus minus vero quas rerum sapiente!
+            </p>
+        </section>
+
+      <script src="../app.js"></script>
+        <script>
+            const getCookie = () =>{
+                var x = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({
+                ...accumulator, [key.trim()]: decodeURIComponent(value) }), {}
+                );
+    
+                const image = document.querySelector('#card-picture').src = '../' + x.imagePath;
+                const title = document.querySelector('#card-name').innerHTML = x.cardName;
+            };
+          </script>
+
+        <footer>
+            <h1>illusionist<span class="h1color">.</span></h1>
+            <ul class="footer-links">
+                <li>
+                    <a href="cards.html">Cards</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>

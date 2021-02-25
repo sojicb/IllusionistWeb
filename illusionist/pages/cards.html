@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>illusionist.</title>
+        <link rel="stylesheet" href="../style/style.css">
+    </head>
+    <body onload="deleteCookie()">
+        <nav>
+            <div class="logo">
+                <a href="../index.html"><h1>illusionist<span class="h1color">.</span></h1></a>
+            </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="cards.html">Cards</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav>
+
+        <script src="../app.js"></script>
+
+        <div class="title">
+            <h1 style="margin-top: 50px">Browse <span class="h1color"> Cards</span></h1>
+        </div>
+
+        <div class="wrapper">
+            <ul>
+                <li><a onclick="getCardInformation('images/deck1.jpg', 'Monarchs')" href="information.html" ><img class="browse" src="../images/deck1.jpg"></a>
+                    <span class="caption"> Monarchs</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck2.png', 'Regalia')" href="information.html"><img class="browse" src="../images/deck2.png"></a>
+                    <span class="caption"> Regalia</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck3.png', 'Run')" href="information.html"><img class="browse" src="../images/deck3.png"></a>
+                    <span class="caption"> Run</span>
+                </li>
+            </ul>
+            <ul>
+                <li><a onclick="getCardInformation('images/deck4.png', 'Jerrys Nuggets')" href="information.html"><img class="browse" src="../images/deck4.png"></a>
+                    <span class="caption"> Jerrys Nuggets</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck5.png', 'The Games of Spades')" href="information.html"><img class="browse" src="../images/deck5.png"></a>
+                    <span class="caption"> The Games of Spades</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck6.png', 'COBRA Black Edition')" href="information.html"><img class="browse" src="../images/deck6.png"></a>
+                    <span class="caption"> COBRA Black Edition</span>
+                </li>
+            </ul>
+            <ul>
+                <li><a onclick="getCardInformation('images/deck7.png', 'Memento Mori')" href="information.html"><img class="browse" src="../images/deck7.png"></a>
+                    <span class="caption"> Memento Mori</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck8.png', 'Rounders')" href="information.html"><img class="browse" src="../images/deck8.png"></a>
+                    <span class="caption"> Rounders</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck9.png', 'NOC Out')" href="information.html"><img class="browse" src="../images/deck9.png"></a>
+                    <span class="caption"> NOC Out</span>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <h1>illusionist<span class="h1color">.</span></h1>
+            <ul class="footer-links">
+                <li>
+                    <a href="cards.html">Cards</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

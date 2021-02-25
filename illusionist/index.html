@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>illusionist.</title>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body onload="deleteCookie()">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><h1>illusionist<span class="h1color">.</span></h1></a>
+            </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="pages/cards.html">Cards</a>
+                    </li>
+                    <li>
+                        <a href="pages/about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="pages/gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+        </nav>
+
+        <script src="app.js"></script>
+
+        <div class="slider" >
+            <div class="slider-selection">
+                <img class="slides" src="./images/pic1.jpg">
+                <img class="slides" src="./images/pic2.jpg">
+                <img class="slides" src="./images/pic3.jpg">
+            </div>
+  
+            <script>
+                var myIndex = 0;
+                carousel();
+    
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("slides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 5000);
+                }
+            </script>
+        </div>
+
+        <div class="title">
+            <h1 style="margin-top: 50px">Top <span class="h1color"> Decks</span></h1>
+        </div>
+
+        <div class="wrapper">
+            <ul>
+                <li><a onclick="getCardInformation('images/deck1.jpg', 'Monarchs')" href="./pages/information.html" ><img class="browse" src="images/deck1.jpg"></a>
+                    <span class="caption"> Monarchs</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck2.png', 'Regalia')" href="./pages/information.html"><img class="browse" src="images/deck2.png"></a>
+                    <span class="caption"> Regalia</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck3.png', 'Run')" href="./pages/information.html"><img class="browse" src="images/deck3.png"></a>
+                    <span class="caption"> Run</span>
+                </li>
+            </ul>
+            <ul id="more" style="display: none;">
+                <li><a onclick="getCardInformation('images/deck4.png', 'Jerrys Nuggets')" href="./pages/information.html"><img class="browse" src="images/deck4.png"></a>
+                    <span class="caption"> Jerrys Nuggets</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck5.png', 'The Games of Spades')" href="./pages/information.html"><img class="browse" src="images/deck5.png"></a>
+                    <span class="caption"> The Games of Spades</span>
+                </li>
+                <li><a onclick="getCardInformation('images/deck6.png', 'COBRA Black Edition')" href="./pages/information.html"><img class="browse" src="images/deck6.png"></a>
+                    <span class="caption"> COBRA Black Edition</span>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="block-button">
+            <button id="block-button" onclick="showMore()">Show More Decks</button>
+        </div>
+
+        <footer>
+            <h1>illusionist<span class="h1color">.</span></h1>
+            <ul class="footer-links">
+                <li>
+                    <a href="pages/cards.html">Cards</a>
+                </li>
+                <li>
+                    <a href="pages/about.html">About</a>
+                </li>
+                <li>
+                    <a href="pages/gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">Contact</a>
+                </li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+.information{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.information p{
+  text-align: justify;
+  width: 50%;
+}
+
+.information h3{
+  text-align: justify;
+  width: 50%;
+  flex-direction: column;
+}
+
+#card-name{
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    margin-left: 70px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#card-picture{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+
+
